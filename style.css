@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--primary-color);
+}
+:root{
+    --primary-color: #4831eb;
+    --secondary-color:rgba(226, 38, 38, 0.133);
+    --padding-inline:20px;
+}
+
+#promotion-card {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    width: 300px;
+    color: var(--primary-color);
+    background: aqua;
+}
+#promotion-card img{
+    border-radius: 50px;
+}
+
+#channel-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    margin-bottom: 10px;
+}
+
+#channel-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#timer {
+    font-size: 24px;
+    color: #ff0000;
+    display: flex;
+    justify-content: center;
+}
+
+.timer-box {
+    width: 50px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 12px 24px;
+}
+/* #channel-link {
+    margin-top: 15px;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+} */
+#channel-link {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 8px 15px; /* Adjust padding to make it short and beautiful */
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#channel-link:hover {
+    background-color: #0056b3;
+}
+.animation-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+.timeout-message {
+    color: #ff0000;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #channel-logo {
+        width: 80px;
+        height: 80px;
+    }
+    #channel-name {
+        font-size: 16px;
+    }
+    #timer {
+        font-size: 20px;
+    }
+    .timer-box {
+        width: 40px;
+    }
+    #channel-link {
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #channel-logo {
+        width: 120px;
+        height: 120px;
+    }
+    #channel-name {
+        font-size: 20px;
+    }
+    #timer {
+        font-size: 28px;
+    }
+    .timer-box {
+        width: 60px;
+    }
+    #channel-link {
+        padding: 12px;
+    }
+}
